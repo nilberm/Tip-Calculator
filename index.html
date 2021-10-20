@@ -21,22 +21,25 @@
     <div id="calculator">
       <div id="bill">
         <label for="">Bill<br></label>
-        <input type="number">
+        <input class="input" placeholder="0.00"  type="number" style="background-image: url(images/icon-dollar.svg);" minlength="1" max="6">
       </div>
 
       <div id="select-tip">
         <label for="">Select Tip %<br></label>
-        <button>5%</button>
-        <button>10%</button>
-        <button>15%</button>
-        <button>25%</button>
-        <button>50%</button>
-        <button>Custon</button>
+        <div id="buttons_settings">
+          <button>5%</button>
+         <button>10%</button>
+         <button>15%</button>
+         <button>25%</button>
+         <button>50%</button>
+         <button>Custon</button>
+        </div>
+        
       </div>
       
       <div id="Num-people">
         <label for="">Number of People</label>
-        <input type="number">
+        <input class="input" type="number" style="background-image: url(images/icon-person.svg);">
       </div>
 
   
@@ -51,7 +54,7 @@
         <p class="valuer">$0</p>
       </div>
     
-      <button>RESET</button>
+      <input id="reset" type="reset">
     </div>
   </div>
   
