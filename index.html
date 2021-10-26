@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">  
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="images/logo.svg">
-  
+
   <title>Tip calculator app</title>
 
 
 </head>
+
 <body>
   <h1>SPLI<br>TTER</h1>
 
@@ -21,28 +23,28 @@
     <div id="calculator">
       <div id="bill">
         <label for="">Bill<br></label>
-        <input class="input" placeholder="0.00"  type="number" style="background-image: url(images/icon-dollar.svg);" minlength="1" max="6">
+        <input id="billInput" class="input" placeholder="0.00" type="number" value="" onblur="billValue()" style="background-image: url(images/icon-dollar.svg);">
       </div>
 
       <div id="select-tip">
         <label for="">Select Tip %<br></label>
         <div id="buttons_settings">
-          <button id="5" class="porcent">5%</button>
-         <button id="10" class="porcent">10%</button>
-         <button id="15" class="porcent">15%</button>
-         <button id="25" class="porcent">25%</button>
-         <button id="50" class="porcent">50%</button>
-         <input id="custonNumber" type="number" placeholder="Custon" max="100"></input>
+          <button class="porcent" value="5">5%</button>
+          <button class="porcent" value="10">10%</button>
+          <button class="porcent" value="15">15%</button>
+          <button class="porcent" value="25">25%</button>
+          <button class="porcent" value="50">50%</button>
+          <input id="custonNumber" class="porcent" type="number" onblur="porcentaV()" placeholder="Custon" value="" ></input>
         </div>
-        
-      </div>
-      
-      <div id="num-people">
-        <label for="">Number of People</label>
-        <input class="input" placeholder="1" type="number" style="background-image: url(images/icon-person.svg);">
+
       </div>
 
-  
+      <div id="num-people">
+        <label for="">Number of People</label>
+        <input id="numPeople" class="input" placeholder="1" type="number" value="" onblur="peopleV()" style="background-image: url(images/icon-person.svg);">
+      </div>
+
+
     </div>
     <div id="result">
       <div id="amount">
@@ -53,14 +55,15 @@
         <p>Total<br><span>/ person</span></p>
         <p class="valuer">$0</p>
       </div>
-    
+
       <input id="reset" type="reset">
     </div>
   </div>
-  
 
-  
-  
-  <script src="script.js"></script>
+
+
+
+  <script src="script.js"> </script>
 </body>
+
 </html>
