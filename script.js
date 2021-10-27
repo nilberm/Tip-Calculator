@@ -2,7 +2,7 @@ var bill = ""
 
 function billValue() {
     bill = parseInt(document.getElementById("billInput").value) 
-    console.log(bill)
+    calc()
 }
 
 const buttons = document.querySelectorAll('.porcent')
@@ -14,18 +14,45 @@ function handleClick({ target }){
     if (previusActive) previusActive.classList.remove('porcent-active')
 
     target.classList.add('porcent-active')
+    porcentaV()
+    calc()
 }
 
-var porcentValue = ""
+var porcentValue = 0.15
 
 function porcentaV() {
-    porcentValue = parseInt(document.querySelector('.porcent-active').value)
+    porcentValue = parseFloat(document.querySelector('.porcent-active').value)
+    porcentValue = porcentValue / 100
     console.log(porcentValue)
+    calc()
 }
 
-var peopleValue = ""
+var peopleValue = 1
 
 function peopleV() {
     peopleValue = parseInt(document.getElementById("numPeople").value)
     console.log(peopleValue)
+    calc()
+}
+
+const calcValue = document.querySelector('#calcValue')
+const calcTotal = document.querySelector('#calcTotal')
+
+function calc(){
+    var tipAmount = bill / peopleValue * porcentValue
+    console.log(tipAmount)
+    calcValue.innerHTML = "$" + tipAmount
+
+    var totalAmount = bill + tipAmount
+    calcTotal.innerHTML = "$" + totalAmount
+
+
+}
+
+function resetFunctions(){
+    bill = ""
+    peopleValue = 1
+    porcentValue = 0.15
+    calc()
+
 }
