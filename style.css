@@ -145,3 +145,34 @@ button{
     text-transform: uppercase;
 }
 
+@media (min-width: 1200px){
+    #container{
+        margin: auto;
+        height: 30rem;
+        width: 70rem;
+        display: grid;
+        grid-template-columns: auto auto;
+        border-radius: 2rem;
+    }
+    #calculator{
+        width: 33rem;
+    }
+    #result{
+        width: 33rem;
+    }
+    #result p{
+        font-size: 1.5rem;
+    }
+    #result .valuer{
+        font-size: 3rem;   
+    }
+    #result #reset{
+        position: relative;
+        top: 4rem;
+        height: 4rem;
+    }
+    
+    button{
+        height: 3rem;
+    }
+}

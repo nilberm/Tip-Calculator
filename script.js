@@ -40,11 +40,10 @@ const calcTotal = document.querySelector('#calcTotal')
 
 function calc(){
     var tipAmount = bill / peopleValue * porcentValue
-    console.log(tipAmount)
-    calcValue.innerHTML = "$" + tipAmount
+    calcValue.innerHTML = "$" + tipAmount.toFixed(2)
 
-    var totalAmount = bill + tipAmount
-    calcTotal.innerHTML = "$" + totalAmount
+    var totalAmount = bill / peopleValue + tipAmount
+    calcTotal.innerHTML = "$" + totalAmount.toFixed(2)
 
 
 }
